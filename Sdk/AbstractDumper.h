@@ -8,10 +8,9 @@ public:
 	AbstractDumper();
 	~AbstractDumper();
 
-	virtual AbstractNode getRoot();
-	virtual json dumpHierarchy(json params);
+	virtual AbstractNode* getRoot();
+	json dumpHierarchy(json params);
 
 protected:
-	virtual json dumpHierarchyImpl(AbstractNode node, bool onlyVisibleNode);
+	json dumpHierarchyImpl(AbstractNode *node, bool onlyVisibleNode);
 };
-

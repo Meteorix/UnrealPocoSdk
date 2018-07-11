@@ -8,8 +8,7 @@ class UnrealDumper: public AbstractDumper
 public:
 	UnrealDumper();
 	~UnrealDumper();
-	AbstractNode getRoot();
-	json dumpHierarchy(json params);
+	AbstractNode* getRoot();
 
 	AActor *m_actor;
 
